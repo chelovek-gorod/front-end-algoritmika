@@ -102,6 +102,9 @@ function clickImage(id, image) {
 
 function testOpenPair(id, image) {
     if (image === firstOpen.image) {
+        id.removeAttribute('onclick');
+        firstOpen.id.removeAttribute('onclick');
+
         openImagesNumber++;
         if (openImagesNumber === pairForWin) endGame();
         else firstOpen = secondOpen = undefined;
